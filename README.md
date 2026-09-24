@@ -14,10 +14,10 @@ Personal (all projects):
 git clone https://github.com/d-date/apple-app-icon-skill ~/.claude/skills/apple-app-icon
 ```
 
-Project only (commit it to share with your team):
+Project only (as a submodule, so teammates get it on checkout):
 
 ```sh
-git clone https://github.com/d-date/apple-app-icon-skill .claude/skills/apple-app-icon
+git submodule add https://github.com/d-date/apple-app-icon-skill .claude/skills/apple-app-icon
 ```
 
 Claude Code picks it up automatically. Invoke it explicitly with `/apple-app-icon`, or just ask something like "review my app icon against the HIG".
@@ -30,19 +30,21 @@ Personal (all projects):
 git clone https://github.com/d-date/apple-app-icon-skill ~/.agents/skills/apple-app-icon
 ```
 
-Project only:
+Project only (as a submodule):
 
 ```sh
-git clone https://github.com/d-date/apple-app-icon-skill .agents/skills/apple-app-icon
+git submodule add https://github.com/d-date/apple-app-icon-skill .agents/skills/apple-app-icon
 ```
 
-Restart Codex to load it. Invoke it explicitly with `$apple-app-icon` (or via `/skills`), or let Codex select it from the description.
+Codex detects new skills automatically (restart if it doesn't appear). Invoke it explicitly with `$apple-app-icon` (or via `/skills`), or let Codex select it from the description.
 
 ## Update
 
 ```sh
 git -C <install-path> pull
 ```
+
+For a submodule install, commit the updated submodule pointer afterwards.
 
 To refresh the content from Apple, fetch the page data (the HTML page is JS-rendered):
 
