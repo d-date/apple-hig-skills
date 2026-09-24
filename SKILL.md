@@ -1,6 +1,6 @@
 ---
 name: apple-app-icon
-description: Apple Human Interface Guidelines for app icons (iOS, iPadOS, macOS, tvOS, visionOS, watchOS) — layered Liquid Glass icons, Icon Composer, icon shape and masking, design rules, system visual effects, dark/clear/tinted appearances, alternate icons, and size/color-space specs. Use when designing, creating, reviewing, or exporting an app icon, preparing icon layers for Icon Composer or an Xcode asset catalog, or checking an icon against Apple's guidelines.
+description: Use when designing, creating, reviewing, or exporting an Apple app icon, preparing icon layers for Icon Composer or an Xcode asset catalog, or checking an icon against Apple's Human Interface Guidelines. Covers iOS, iPadOS, macOS, tvOS, visionOS, and watchOS — layered Liquid Glass icons, shape and masking, design rules, system effects, dark/clear/tinted appearances, alternate icons, and size/color-space specs.
 ---
 
 # Apple App Icons (HIG)
@@ -77,7 +77,7 @@ When reviewing an icon or asset set, check each and report violations with the r
 2. Layers are unmasked, square/rectangular, hard-edged; background full-bleed and opaque.
 3. Vector (outlined text) or PNG; supported color space.
 4. Primary content centered within the template grid; tvOS safe zone respected.
-5. Simple concept, few shapes, no thin lines, no photos, no UI screenshots, no Apple hardware.
+5. Simple concept, few shapes, no thin lines, no UI screenshots, no Apple hardware; flag photos as a weaker choice than illustrations.
 6. No text unless essential; no call-to-action or context words.
 7. No baked-in shadows, highlights, bevels, blurs, or glows (or justified and tested).
 8. Dark / clear / tinted variants keep the same features and stay legible (iOS/iPadOS/macOS); alternate icons include their own variants.
