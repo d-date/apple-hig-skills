@@ -1,0 +1,11 @@
+{
+  "name": "apple-hig-skills",
+  "plugins": [
+    {
+      "name": "apple-app-icon",
+      "source": { "source": "local", "path": "./plugins/apple-app-icon" },
+      "policy": { "installation": "AVAILABLE" },
+      "category": "Design"
+    }
+  ]
+}
