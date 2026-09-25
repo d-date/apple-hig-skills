@@ -1,50 +1,43 @@
-# apple-app-icon-skill
+# apple-hig-skills
 
-An agent skill that condenses Apple's [Human Interface Guidelines: App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons) — layered Liquid Glass icons, Icon Composer, shape and masking, design rules, appearances (dark / clear / tinted), platform specifics, and specs — plus a review checklist.
+Agent skills for Claude Code and Codex based on Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/). This repository is a plugin marketplace for both tools.
 
-Based on the HIG revision of June 8, 2026.
+| Plugin | Skill | Source |
+|---|---|---|
+| `apple-app-icon` | [`apple-app-icon`](plugins/apple-app-icon/skills/apple-app-icon/SKILL.md) — layered Liquid Glass icons, Icon Composer, shape and masking, design rules, appearances (dark / clear / tinted), platform specifics, specs, and a review checklist | [HIG: App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons) (June 8, 2026) |
 
 ## Install
 
 ### Claude Code
 
-Personal (all projects):
-
 ```sh
-git clone https://github.com/d-date/apple-app-icon-skill ~/.claude/skills/apple-app-icon
+claude plugin marketplace add d-date/apple-hig-skills
+claude plugin install apple-app-icon@apple-hig-skills
 ```
 
-Project only (as a submodule, so teammates get it on checkout):
+Or inside a session: `/plugin marketplace add d-date/apple-hig-skills`, then `/plugin install apple-app-icon@apple-hig-skills`.
 
-```sh
-git submodule add https://github.com/d-date/apple-app-icon-skill .claude/skills/apple-app-icon
-```
-
-Claude Code picks it up automatically. Invoke it explicitly with `/apple-app-icon`, or just ask something like "review my app icon against the HIG".
+Invoke it explicitly with `/apple-app-icon:apple-app-icon`, or just ask something like "review my app icon against the HIG".
 
 ### Codex
 
-Personal (all projects):
-
 ```sh
-git clone https://github.com/d-date/apple-app-icon-skill ~/.agents/skills/apple-app-icon
+codex plugin marketplace add d-date/apple-hig-skills
+codex plugin add apple-app-icon@apple-hig-skills
 ```
 
-Project only (as a submodule):
+Invoke it explicitly with `$apple-app-icon` (or via `/skills`), or let Codex select it from the description.
 
-```sh
-git submodule add https://github.com/d-date/apple-app-icon-skill .agents/skills/apple-app-icon
-```
+### Manual
 
-Codex detects new skills automatically (restart if it doesn't appear). Invoke it explicitly with `$apple-app-icon` (or via `/skills`), or let Codex select it from the description.
+Copy `plugins/apple-app-icon/skills/apple-app-icon/` into `~/.claude/skills/` (Claude Code) or `~/.agents/skills/` (Codex).
 
 ## Update
 
 ```sh
-git -C <install-path> pull
+claude plugin marketplace update apple-hig-skills && claude plugin update apple-app-icon@apple-hig-skills
+codex plugin marketplace upgrade apple-hig-skills
 ```
-
-For a submodule install, commit the updated submodule pointer afterwards.
 
 To refresh the content from Apple, fetch the page data (the HTML page is JS-rendered):
 
