@@ -1,0 +1,9 @@
+{
+  "name": "apple-app-icon",
+  "description": "Apple HIG app icon guidance: layered Liquid Glass icons, Icon Composer, masking, appearances, specs, and a review checklist.",
+  "version": "1.0.0",
+  "author": { "name": "Daiki Matsudate", "url": "https://github.com/d-date" },
+  "homepage": "https://github.com/d-date/apple-hig-skills",
+  "repository": "https://github.com/d-date/apple-hig-skills",
+  "keywords": ["apple", "hig", "app-icon", "icon-composer", "liquid-glass", "ios"]
+}

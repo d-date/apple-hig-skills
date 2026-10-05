@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "apple-hig-skills",
+  "description": "Agent skills based on Apple Human Interface Guidelines.",
+  "owner": { "name": "Daiki Matsudate", "url": "https://github.com/d-date" },
+  "plugins": [
+    {
+      "name": "apple-app-icon",
+      "source": "./plugins/apple-app-icon",
+      "description": "Apple HIG app icon guidance: layered Liquid Glass icons, Icon Composer, masking, appearances, specs, and a review checklist.",
+      "version": "1.0.0",
+      "category": "design"
+    }
+  ]
+}
